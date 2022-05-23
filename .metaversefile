@@ -1,0 +1,8 @@
+{
+  "name": "silkworm",
+  "description": "A creepy creature whos bite can be fatal",
+  "start_url": "index.js",
+  "components": {
+    "activate": true
+  }
+}
