@@ -84,9 +84,9 @@ export default e => {
 
   let silkWormAction = null;
   const targetPositionAction = () => {
-    const range = 10;
+    const range = 0;
     const targetPosition = app.position.clone()
-      .add(new THREE.Vector3(Math.random() * 2 - 1, 0, Math.random() * 2 - 1).multiplyScalar(range));
+      .add(new THREE.Vector3(Math.random() * 0, 0, Math.random() * 0).multiplyScalar(range));
     return {
       // name: 'targetPosition',
       update(timestamp) {
@@ -114,7 +114,7 @@ export default e => {
       update(timestamp) {
         localEuler.setFromQuaternion(app.quaternion, 'YXZ');
         if (_angleDiff(localEuler.y, targetEuler.y) > 0.1) {
-          app.position.add(new THREE.Vector3(0, 0, -speed).applyQuaternion(app.quaternion));
+          app.position.add(new THREE.Vector3(0, 0, 0).applyQuaternion(app.quaternion));
           _angleQuaternionTowards(app.quaternion, targetEuler.y, angularSpeed);
 
           app.updateMatrixWorld();
